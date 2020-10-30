@@ -17,6 +17,7 @@ async def die(ctx):
 
 if __name__ == "__main__":
     bot.config = config
+    bot.load_extension("jishaku")
     for module in bot.config.initial_modules:
         try:
             bot.load_extension(f"modules.{module}")
