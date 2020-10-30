@@ -3,7 +3,7 @@ import discord
 
 import config
 
-bot = commands.Bot(command_prefix="s!")
+bot = commands.Bot(command_prefix=config.prefix)
 
 @bot.event
 async def on_ready():
