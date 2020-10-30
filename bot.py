@@ -17,4 +17,9 @@ async def die(ctx):
 
 if __name__ == "__main__":
     bot.config = config
+    for module in bot.config.initial_modules:
+        try:
+            bot.load_extension(f"modules.{module}")
+        except Exception:
+            print_exc()
     bot.run(config.token)
